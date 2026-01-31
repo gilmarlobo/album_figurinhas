@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum de Figurinhas - Intellectus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header>
+     <button class="btn-voltar" onclick="voltarIndex()">Voltar</button>
+
+    <h1>Rede de Ensino Intellectus</h1>
+    <div class="perfil-aluno">
+        <p>Aluno: <span id="nome-aluno">...</span></p>
+        <div class="score-badge">
+            Pontuação do Módulo: <span id="pontos-modulo">0</span> / 100
+        </div>
+    </div>
+</header>
+
+ <nav class="menu-paginas">
+    <button onclick="renderizarAlbum(1)">Módulo 1: Sistema Operacional</button>
+    <button onclick="renderizarAlbum(2)">Módulo 2: Word</button>
+    <button onclick="renderizarAlbum(3)">Módulo 3: PowerPoint</button>
+    <button onclick="renderizarAlbum(4)">Módulo 4: Excel</button>
+    <button onclick="renderizarAlbum(5)">Módulo 5: Internet e IA</button>
+</nav>
+
+<main id="album-container">
+    <div class="painel-pontuacao">
+    <h3>Progresso do Módulo</h3>
+    <div class="barra-progresso">
+        <div id="progresso-preenchimento" style="width: 0%;"></div>
+    </div>
+    <p><span id="pontos-atuais">0</span> / 100 Pontos</p>
+</div>
+    </main>
+    <div id="modal-figurinha" class="modal hidden">
+    <div class="modal-content">
+        <span class="modal-close" onclick="fecharModal()">✖</span>
+        <img id="modal-img" src="" alt="Figurinha ampliada">
+        <p id="modal-desc"></p>
+    </div>
+</div>
+
+   
+    <!-- 1️⃣ PRIMEIRO a CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- 2️⃣ DEPOIS o database.js -->
+<script src="database.js"></script>
+
+<!-- 3️⃣ POR ÚLTIMO o script.js -->
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Login Professor</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Área do Professor</h2>
+
+    <input type="email" id="email" placeholder="E-mail">
+    <input type="password" id="senha" placeholder="Senha">
+
+    <button onclick="login()">Entrar</button>
+
+    <p id="erro-login" style="color:red;"></p>
+</div>
+
+<script src="database.js"></script>
+<script>
+async function login() {
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    const { data, error } = await supabaseClient.auth.signInWithPassword({
+        email: email,
+        password: senha
+    });
+
+    if (error) {
+        console.error(error);
+        alert(error.message);
+        return;
+    }
+
+    console.log("Login OK:", data);
+    window.location.href = "admin.html";
+}
+
+
+</script>
+
+</body>
+</html>
