@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal Intellectus - Álbuns</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 1️⃣ CDN DO SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="assets/logo_intellectus.png" alt="Logo Intellectus" width="200">
+        <h2>Acesse seu Álbum de Figurinhas</h2>
+
+        <select id="select-aluno" > <!--nessa linha falta o on change-->
+            <option value="">Selecione seu nome...</option>
+        </select>
+
+        <button onclick="acessarAlbum()">Visualizar Álbum</button>
+        <hr>
+        <button class="btn-admin" onclick="window.location.href='login.html'">
+            Painel do Professor
+        </button>
+
+    </div>
+      
+    <!-- 2️⃣ DATABASE (cria o supabase UMA VEZ) -->
+    <script src="database.js"></script>
+
+    <!-- 3️⃣ SCRIPT GERAL -->
+    <script src="script.js"></script>
+
+</body>
+</html>
