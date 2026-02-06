@@ -15,8 +15,8 @@ const trilhaEducacional = {
             { titulo: "Configurações", desc: "Ajusta configurações básicas e reconhece propriedades de arquivos." } // [cite: 24, 25]
         ],
         ouro: [
-            { titulo: "Usuário Consciente", desc: "Explica o que é um sistema operacional e sua função." }, // [cite: 27, 28]
-            { titulo: "Solução de Problemas", desc: "Resolve problemas básicos e usa o gerenciador de tarefas." } // [cite: 30, 31, 32]
+            { titulo: "Explorador Consciente", desc: "Explica o que é um sistema operacional e sua função." }, // [cite: 27, 28]
+            { titulo: "Caçador de Bugs - I", desc: "Resolve problemas básicos e usa o gerenciador de tarefas." } // [cite: 30, 31, 32]
         ]
     },
     2: { // Módulo 2 [cite: 34]
