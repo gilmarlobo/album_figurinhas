@@ -92,7 +92,7 @@ const trilhaEducacional = {
         ]
     }
 };
-// Função para preencher o select de alunos
+// Função para p
 async function inicializarAdmin() {
     const selectAluno = document.getElementById('admin-select-aluno');
     const selectModulo = document.getElementById('admin-select-modulo');
